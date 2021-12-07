@@ -5,6 +5,7 @@
 4. No salted hashes
 5. Weak passwords
 6. Indexing enabled
+7. Debug information is visible (Apache version, PHP version, /server-status etc.)
 
 # Vulnerabilities
 1. All fields vulnerable to XSS attacks
