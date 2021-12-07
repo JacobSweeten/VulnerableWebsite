@@ -6,9 +6,12 @@
 
 	$conn = new mysqli($sql_server, $sql_username, $sql_password, $sql_db);
 
+	$full_name = "";
+	$username = "";
+
 	if(isset($_COOKIE["session"]))
 	{
-		$sql = "SELECT username FROM sessions WHERE token = '" . $_COOKIE["session"] . "';";
+		$sql = "SELECT username, full_name FROM sessions NATURAL JOIN users WHERE token = '" . $_COOKIE["session"] . "';";
 
 		$res = $conn->query($sql);
 
@@ -16,6 +19,12 @@
 		{
 			header("location: /index.php");
 			return;
+		}
+		else
+		{
+			$row = $res->fetch_assoc();
+			$username = $row["username"];
+			$full_name = $row["full_name"];
 		}
 	}
 	else
@@ -30,6 +39,7 @@
 		<link rel="stylesheet" href="wall.css" />
 	</head>
 	<body>
+		<h1>Hello <?php echo($full_name); ?>!</h1>
 		<form method="GET" action="/logout.php">
 			<input type="submit" value="Logout">
 		</form>

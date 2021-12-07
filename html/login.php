@@ -21,6 +21,7 @@
 	}
 	else
 	{
+		$username = $res->fetch_assoc()["username"];
 		$token = md5($username . $password . date("Y-m-d H:i:s"));
 
 		$sql = "INSERT INTO sessions (username, token) VALUES ('" . $username . "', '" . $token . "');";

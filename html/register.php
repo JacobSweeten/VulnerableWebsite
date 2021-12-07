@@ -11,7 +11,13 @@
 
 	if(strcmp($password, $password_confirm) != 0)
 	{
-		echo("Password mismatch.<br />");
+		echo("Password mismatch");
+		return;
+	}
+
+	if(!strcmp($password, "") || !strcmp($username, "") || !strcmp($full_name, ""))
+	{
+		echo("Bad username");
 		return;
 	}
 

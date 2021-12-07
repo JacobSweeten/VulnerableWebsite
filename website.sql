@@ -72,7 +72,6 @@ CREATE TABLE `sessions` (
 
 LOCK TABLES `sessions` WRITE;
 /*!40000 ALTER TABLE `sessions` DISABLE KEYS */;
-INSERT INTO `sessions` VALUES ('hi','cfb8f63a303da3114879fee139543feb'),('urmom','5418a2bae60876567aee664a2efaeab1'),('urmom','9ee79d17bda967912883fbfd5ae90725'),('urmom','e527d8e75410b72512d7a6fba93d37a7');
 /*!40000 ALTER TABLE `sessions` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -110,4 +109,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2021-12-07 14:39:42
+-- Dump completed on 2021-12-07 15:10:45
